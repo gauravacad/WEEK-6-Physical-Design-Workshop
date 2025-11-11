@@ -86,8 +86,8 @@ After LEF file we need to copy the required libraries, here we will have differe
 
 
 Now we need to make some changes in the .config file as shown in the image
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/c74a1945-ac49-4dfc-88f1-ccbc4615b78a" />
 
-![Uploading image.png…]()
 
 
 After that we need to open bash using command **`docker`** being in openlane directory. And enter into the open lane and prepare the design as shown in figure. Once preparation is complete we need to use following commands 
@@ -97,6 +97,7 @@ After that we need to open bash using command **`docker`** being in openlane dir
 **`add_lefs -src $lefs`**
 
 ![Screenshot from 2024-05-03 16-22-21](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ae8f5081-bccd-4e13-a4c4-ebb9704e8d83)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/a20bd83c-53bb-4529-8de5-1def9e1db4cb" />
 
 And now again use the command **`run_synthesis`** and check whether it maps our custom vsdinverter or not.
 
