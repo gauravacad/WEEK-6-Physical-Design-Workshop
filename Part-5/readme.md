@@ -76,25 +76,30 @@ We can see the final layout in gui using magic tool by using the command
 
 - `Maze Routing - Lee's Algorithm`
 <p align="center">
-  <img width="1000" height="" src="../images/168.png">
+  <img width="1903" height="1075" alt="168" src="https://github.com/user-attachments/assets/fd6dc733-025d-490a-8457-4517f9394ccb" />
+
 </p>
 
 <p align="center">
-  <img width="1000" height="" src="../images/169.png">
+  <img width="1880" height="1072" alt="169" src="https://github.com/user-attachments/assets/264ce1ca-1714-4b05-858d-a2e3888cb64d" />
+
 </p>
 
 - DRC Check
   
 <p align="center">
-  <img width="1000" height="" src="../images/170.png">
+  <img width="1920" height="1080" alt="170" src="https://github.com/user-attachments/assets/d2aa7dee-a686-4b09-bd33-8f9111ee7b96" />
+
 </p>
 <p align="center">
-  <img width="1000" height="" src="../images/171.png">
+  <img width="1833" height="1032" alt="171" src="https://github.com/user-attachments/assets/128553ec-c234-4a48-be20-724df2921f80" />
+
 </p>
 
 - Parasitics Extraction
 <p align="center">
-  <img width="1000" height="" src="../images/172.png">
+  <img width="1920" height="1080" alt="172" src="https://github.com/user-attachments/assets/1e7ef683-0b21-4674-9a40-4c81f05f7c9e" />
+  
 </p>
 
 
