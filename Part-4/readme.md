@@ -96,33 +96,37 @@ After that we need to open bash using command **`docker`** being in openlane dir
 
 **`add_lefs -src $lefs`**
 
-![Screenshot from 2024-05-03 16-22-21](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ae8f5081-bccd-4e13-a4c4-ebb9704e8d83)
 <img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/a20bd83c-53bb-4529-8de5-1def9e1db4cb" />
 
 And now again use the command **`run_synthesis`** and check whether it maps our custom vsdinverter or not.
 
-![Screenshot from 2024-05-03 16-28-45](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/34d10bf0-9d1c-4795-af34-c74ebfc6a03f)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/e13893b1-8134-451f-9fb0-9333382bd993" />
+
 
 From the above figure we can see that synthesis was succesful and also we have 1554 instances of our vsdinverter. So this stage is successful.
 
-![Screenshot from 2024-05-03 22-50-28](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a035ddeb-bb1d-4ff5-8760-4bac7fcd62c6)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/5a18bcd2-44f0-4bb7-8f59-2d4e9a2f04f6" />
+
 
  Now as we done with Floorplan stage, we can proceed to placement stage by using the command **`run_placement`**
 
-![Screenshot from 2024-05-03 22-51-48](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/2c16610e-7eac-4855-a2f5-8ee1d2fdc4b1)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/65889100-7355-49fb-b8cf-569c195aec13" />
 
  Now after the placement is done,lets check whether the cell that we have created is placed in the design. For this being in the placement directory we should use the command
 
  **`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`**
 
-![Screenshot from 2024-05-03 23-01-51](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/90cd7edf-09d6-4c67-94ac-baeb8ebe49b2)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/73595a73-adaa-4eda-8103-118f0535a58c" />
 
-![Screenshot from 2024-05-03 23-04-53](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/943b3346-a76b-4dbe-8079-b55e0c5da016)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/ec8195a0-b6a6-4bb6-a799-c7247c77920e" />
+
 
 
  Clearly we can see that the cell that we have created " sky130_vsdinv" is placed in the design and now lets check whether it is alligned correctly with other cells or not by using the command **`expand`** in the tkcon terminal.
 
-![Screenshot from 2024-05-03 23-06-49](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/0117d6f3-7935-4e30-84c6-5f97865d5b89)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/9fe7adf8-d470-4931-9ccf-9516508012e8" />
+
 
  Yes,Its perfectly alligned!
 
