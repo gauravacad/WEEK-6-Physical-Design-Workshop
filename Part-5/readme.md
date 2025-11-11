@@ -65,7 +65,7 @@ From tha above figures we can see that routing is done and it is done with 0 vio
 
 We can see the final layout in gui using magic tool by using the command 
 
-**`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/results/routing/picorv32a.def &`**
+**`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-11_16-53/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-11_16-53/results/routing/picorv32a.def &`**
 
 
 <img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/e71b4d53-3743-4a53-a5df-f7e1bbf27ed6" />
