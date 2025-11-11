@@ -1,4 +1,4 @@
-
+ 
 # Day-3: Design Library Cell using Magic Layout and ngspice Characterization  
 
 ## [Inception of Layout and CMOS fabrication process](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/tree/main/Part-3#inception-of-layout-and-cmos-fabrication-process)  
