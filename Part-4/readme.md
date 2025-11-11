@@ -55,14 +55,14 @@
 
 
 Now we need to extract the LEF file.First save .mag file by using the command **`save sky130_vsdinv.mag`** in the tkcon terminal.
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/d034bcd3-ea14-44e1-8480-48bc433ef306" />
 
-![Screenshot from 2024-05-03 15-06-12](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/773a41d2-5c04-4481-bd6c-0342d686e21f)
-<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/abd41a2e-1a93-4ae1-bb91-507d51bc2a0b" />
 
 Now open the saved .mag file using the command **`magic -T sky130A.tch sky130_vsdinv.mag &`**
 
-![Screenshot from 2024-05-03 15-10-20](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1b3829cf-0f5b-4bfc-bc41-089e1014f306)
-<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/d034bcd3-ea14-44e1-8480-48bc433ef306" />
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/abd41a2e-1a93-4ae1-bb91-507d51bc2a0b" />
+
 
 Now in the tkcon terminal use the command **`lef write`** in order to create a LEF file.
 
@@ -273,7 +273,8 @@ We need to follow the similar steps that we have followed earlier in the openroa
 
 **`report_clock_skew -setup`**
 
-![Screenshot from 2024-05-05 06-23-26](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/10e89ad9-f9fd-4646-bf3a-b04e98980485)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/0e5bedc1-5397-4132-8eb1-d032ee8b15de" />
 
 
-![Screenshot from 2024-05-05 06-17-10](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/beee43d7-b727-41ad-b57e-c34c3879c155)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/229d89ee-b299-4b07-a65c-0d1949209406" />
