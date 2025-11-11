@@ -66,11 +66,13 @@ Now open the saved .mag file using the command **`magic -T sky130A.tch sky130_vs
 
 Now in the tkcon terminal use the command **`lef write`** in order to create a LEF file.
 
-![Screenshot from 2024-05-03 15-12-34](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/eebf9888-d9fa-4d53-a91c-d3998b1faaef)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/561b4cf2-a205-4cbb-88ae-409bad204f19" />
 
  Now we can open the LEF file and go through it.
 
-![Screenshot from 2024-05-03 15-15-52](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/85905d3c-ccdc-4f3a-ad3c-ccda8672cb70)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/712bf695-787b-4583-a996-5e81e940c9d8" />
 
  
 ### Introduction to timing libs and steps to include new cell in synthesis
@@ -80,11 +82,13 @@ To proceed futher lets keep all the required files at single place thet is in sr
 
 After LEF file we need to copy the required libraries, here we will have different types of libraries such as fast , slow, typical etc.. , we need to copy all those .lib files to src directory by using **`cp`** command.
 
-  ![Screenshot from 2024-05-03 15-40-24](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/d5eda7fb-d80f-4ae2-b393-b5d3807c44d2)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/b84211f1-4566-42b7-8620-72d6934b950f" />
+
 
 Now we need to make some changes in the .config file as shown in the image
 
-![Screenshot from 2024-05-03 16-01-12](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/635dbe20-014c-4eb8-a798-5c360be1f282)
+![Uploading image.png…]()
+
 
 After that we need to open bash using command **`docker`** being in openlane directory. And enter into the open lane and prepare the design as shown in figure. Once preparation is complete we need to use following commands 
 
@@ -99,9 +103,6 @@ And now again use the command **`run_synthesis`** and check whether it maps our 
 ![Screenshot from 2024-05-03 16-28-45](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/34d10bf0-9d1c-4795-af34-c74ebfc6a03f)
 
 From the above figure we can see that synthesis was succesful and also we have 1554 instances of our vsdinverter. So this stage is successful.
-
-
-
 
 ![Screenshot from 2024-05-03 22-50-28](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a035ddeb-bb1d-4ff5-8760-4bac7fcd62c6)
 
