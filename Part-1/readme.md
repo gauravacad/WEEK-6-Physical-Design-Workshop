@@ -260,26 +260,23 @@ At the end of the terminal we can see that **Preparation is complete**.
 
 After Preparation is done a directory with current date will be created in the runs folder.And in that directory all the directorys that are needed to store the results , reports etc.. will be created.
 
-![Screenshot from 2024-04-29 12-08-25](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9f13846c-4f11-4eef-9ff0-8342675edeca)
+![Uploading image.png…]()
+
 
 Initially every directory will be empty because we haven't performed any operations on the design.But we will have a direcrory named tmp and it contains different types of files.One of the files will be "merged.lef" file, it contains metal layer level and cell level information.
 
-#![Screenshot from 2024-04-29 12-15-29](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a1ab07ee-58cd-4f00-83dc-9ee39c0e03f8)
 
-
-#![Screenshot from 2024-04-29 12-18-08](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/baaf829a-0cce-4869-91b2-1b8f3558df47)
 
 Now, it's time to proceed with the first step in the project. we need to perform Synthesis on the design. For this we need to use the command **`run_synthesis`**.Tool will take some time to perform synthesis, when completed it displays the **Synthesis was successful** message.
 
-![synthesis_successful](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7e6d7b96-a567-4089-b655-681cd4508fa0)
+<img width="1012" height="616" alt="image" src="https://github.com/user-attachments/assets/11a5e51f-a4d9-4b01-bf00-6bfccfe79ebe" />
 
 
 ### Steps to charactirise Synthesis results
 
 Now we need to find out the flipflop percentage in total cells. For this we use reports from Synthesis stage.
 
-![flopcount](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/48d87542-8838-4d13-9b3c-6979e6f42983)
-
+<img width="354" height="585" alt="image" src="https://github.com/user-attachments/assets/5dbf15a4-c9c2-4e07-bd7b-a4fca2795c6d" />
 
 In the above image,we can see that the total no.of cells used in the design are 14876 and the count of D-flipflops in the design are 1613. So, the flipflop percentage is calculated as
 
@@ -287,7 +284,6 @@ In the above image,we can see that the total no.of cells used in the design are 
 
 Before Performing Synthesis the reports directory was empty. After Synthesis the reports that are generated during synthesis will be stored in the reports directory.
 
-![synthesis_reports](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/881d4439-a191-4c1c-a781-2e343d0b134e)
 
 
 
@@ -335,7 +331,7 @@ In this case, when calculated
 
 ![Screenshot 2024-04-29 162810](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5b4ef1fb-2d73-4819-95c7-d3c36de576fd)
 
-In this case, whwn calculated
+In this case, when calculated
 
 - Utilization factor = (4 squnits)/(8 squnits) = 0.5
 - Aspect Ratio = (2 units)/(4 units) = 0.5 //The core is in a rectangular shape.
@@ -349,14 +345,7 @@ In this case, whwn calculated
 <img width="862" height="678" alt="image" src="https://github.com/user-attachments/assets/9ebf4472-baf6-417d-9953-ccde891226c2" />
 
 
-
-<img width="1012" height="616" alt="image" src="https://github.com/user-attachments/assets/11a5e51f-a4d9-4b01-bf00-6bfccfe79ebe" />
-
-
-
-
 <img width="354" height="585" alt="image" src="https://github.com/user-attachments/assets/5dbf15a4-c9c2-4e07-bd7b-a4fca2795c6d" />
-
 
 Here the DFF count:  `sky130_fd_sc_hd__dfxtp_2` = `1613`
 
