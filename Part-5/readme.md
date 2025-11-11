@@ -22,20 +22,23 @@
 
 After completion of CTS, now we need to lay down power distribution network(PDN) for the design and it is done by using the command **`gen_pdn`** .
 
-![gen_pdn_command](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5ce794df-a8a4-4d8c-a687-103a247b6b09)
+<img width="1468" height="888" alt="image" src="https://github.com/user-attachments/assets/11e8ba05-2b15-49cf-8ba8-51e9ff1f0c96" />
 
-![pdn_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/2e684127-62a7-4e3f-938f-14ce6b0570ad)
+
+<img width="1466" height="886" alt="image" src="https://github.com/user-attachments/assets/bf8f0a14-1661-432c-a1f4-40f0c3f7a532" />
+
 
 We can clearly see that "PDN generation was succesful".
 
-![rails straps_info](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4a2d278c-849e-4fb1-b906-d297b12c7401)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/a6e720aa-34a0-4f1d-b0bd-c1ec4b798c31" />
+
 
 In the above figure we can see that the pitch of the standard cell rails is 2.720, which we have expected.
 
 
 ### Lab steps from power straps to std cell power
 
-![Screenshot 2024-05-07 104244](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9cecd9c1-5a25-4a26-851d-11f6ce4fbc49)
+<img width="748" height="497" alt="image" src="https://github.com/user-attachments/assets/f44ceba8-8cf9-4b86-928b-3b94f9a6ff20" />
 
 In the above figure we can observe the path through which power is delivered all the way to standard cells.
 
@@ -52,9 +55,11 @@ In the above figure we can observe the path through which power is delivered all
 
 The Final stage in the flow is ROUTING. we can start routing by using the command **`run_routing`** .
 
-![routing_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1e136428-7ac7-4eed-b71d-5b3d754f08b4)
 
-![no_violations](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/fcd6128c-86ba-4871-a904-0713a24f3c3b)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/00f89377-ac16-4bc5-89c6-547f6cce32e9" />
+
+
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/3fc7737f-8d02-491e-93ee-99d76d76dff5" />
 
 From tha above figures we can see that routing is done and it is done with 0 violations, So our routing is succesful but we can see the negative slack. We need to eliminate that negative slack for succesful completion of Physical design flow.
 
@@ -63,7 +68,8 @@ We can see the final layout in gui using magic tool by using the command
 **`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/results/routing/picorv32a.def &`**
 
 
-![final_layout](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/6f8f6bcb-8d0f-45bb-a0c4-61ea2db92a15)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/e71b4d53-3743-4a53-a5df-f7e1bbf27ed6" />
+
 
 
 
