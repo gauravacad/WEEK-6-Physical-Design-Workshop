@@ -264,10 +264,10 @@ After Preparation is done a directory with current date will be created in the r
 
 Initially every directory will be empty because we haven't performed any operations on the design.But we will have a direcrory named tmp and it contains different types of files.One of the files will be "merged.lef" file, it contains metal layer level and cell level information.
 
-![Screenshot from 2024-04-29 12-15-29](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a1ab07ee-58cd-4f00-83dc-9ee39c0e03f8)
+#![Screenshot from 2024-04-29 12-15-29](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a1ab07ee-58cd-4f00-83dc-9ee39c0e03f8)
 
 
-![Screenshot from 2024-04-29 12-18-08](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/baaf829a-0cce-4869-91b2-1b8f3558df47)
+#![Screenshot from 2024-04-29 12-18-08](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/baaf829a-0cce-4869-91b2-1b8f3558df47)
 
 Now, it's time to proceed with the first step in the project. we need to perform Synthesis on the design. For this we need to use the command **`run_synthesis`**.Tool will take some time to perform synthesis, when completed it displays the **Synthesis was successful** message.
 
@@ -356,3 +356,14 @@ In this case, whwn calculated
 
 
 <img width="354" height="585" alt="image" src="https://github.com/user-attachments/assets/5dbf15a4-c9c2-4e07-bd7b-a4fca2795c6d" />
+
+
+Here the DFF count:  `sky130_fd_sc_hd__dfxtp_2` = `1613`
+
+- And total number of cells = `14876`
+
+    ```
+  D flip-flop ratio  = count of DFFs / total number of cells
+  		     = 1613 / 14876
+  		     = 0.108429685 (OR) 10.8429 %
+    ``` 
