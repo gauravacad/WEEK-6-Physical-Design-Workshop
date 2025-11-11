@@ -1,6 +1,6 @@
 # Day-2: Floorplanning and Placement  
 
-## [Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)  
+## [Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells) 
 
 - [Chip FloorPlanning Considerations](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#chip-floorplanning-considerations)  
 - [Utilization Factor and Aspect Ratio](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#utilization-factor-and-aspect-ratio)  
