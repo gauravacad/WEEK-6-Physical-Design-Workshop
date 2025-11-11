@@ -142,17 +142,20 @@ Next step is to perform STA on the design. For this first we need to complete th
 
 First, we need to create a new file **`pre_sta.conf`** in the openlane directory.
 
-![pre_sta conf](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7847af0f-d514-4277-b0db-fcc622cc3646)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/1a5a4172-1291-4fd4-8235-bdbf1485b127" />
+
 
 After that we need to create another file called **`my_base.sdc`** in the src directory which is picorv32a directory.
 
-![my_base sdc](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/0df33cc7-db83-4611-88df-e9cb2e0d196c)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/525fd559-ebe4-456a-902b-e52237a5d423" />
+
 
 Now we need to use the command **`sta pre_sta.conf`** being in the openlane directory.
 
 We can say that STA is succesful when the slack that we will get equals to that of synthesis stage.
 
-![sta_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e8f90b9c-848f-49e5-bd7b-a7a78a0f48fe)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/b7742aa1-9029-41fe-9f23-9bedf34e503d" />
+
 
 As we can see that Slack is equal to of that we got in synthesis stage. So STA is succesful.
 
@@ -172,15 +175,17 @@ Now the design will get updated with the improved version.
 
 Now we can start working on it, starting with Floorplan by using the same commands that were used before. After succesful completion of Floorplan we should do placement by using the command **`run_placement`**.
 
-![placement_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b2bc9249-6c30-4ea1-a953-e102ec8c77f1)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/d403b13b-8d66-4b88-abe2-1ae54ad0396d" />
 
 After placement is done, we can proceed with cts stage. To perform CTS we should use the command **`run_cts`**.
 
-![cts_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a022b59d-6f48-4806-8b35-97626c8bf5bf)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/1f84ea04-c0c0-41c7-aa97-c76f5d798ea9" />
+
 
 After completion of the cts we can observe that in the synthesis results directory a new **.cts** file is added. The newly added CTS file contains both the previous netlist and also the clock buffers that were added during the cts stage.
 
-![cts v _file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b21c6b13-f78f-45c9-a2dd-57c6f06cf0e8)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/8611036b-5bc4-4ce9-9c95-ddda2c2a5128" />
+
 
 
 ## Timing analysis with real clocks using openSTA
@@ -211,14 +216,16 @@ After completion of the cts we can observe that in the synthesis results directo
 
 **`report_checks -path_delay min_max -format full_clock_expanded -digits 4`**
 
-![steps_to_db](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b2490265-5cce-4c54-a1a5-e04d928df9f0)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/6b15b30f-8817-4559-bdea-65041186807c" />
 
-![db_created](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/d4b47d98-eef0-4e16-8845-4196fb1eb75b)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/29e4347b-6e07-4503-bb0d-0d5d1583eba1" />
+
 
 
 After all these steps the db will get created and by using the last command we will get a timing report too.
 
-![db_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/03755c81-1025-4938-8176-a493c63881f5)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/59e69c26-eb7c-4901-b3b4-c277c606eede" />
+
 
 
 ### Lab steps to execute OpenSTA with right timing libraries and CTS assignment
