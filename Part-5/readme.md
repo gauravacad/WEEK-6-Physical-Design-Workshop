@@ -200,6 +200,9 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 - The `picorv32a.def.png` from the routing is 👇 
 <img width="2048" height="2048" alt="picorv32a def" src="https://github.com/user-attachments/assets/f0a35c32-74d5-49e9-bd44-e27f1a4051b8" />
 
+# Die Area 
+
+<img width="749" height="443" alt="diearea" src="https://github.com/user-attachments/assets/6d779484-a880-4a62-9ec3-ca734afde50c" />
 
 
 ## References
