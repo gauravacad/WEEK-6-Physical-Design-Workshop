@@ -186,18 +186,18 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
   <img width="1000" height="" src="../images/201.png">
 </p>
 <p align="center">
-![Uploading 202.png…]()
+<img width="1846" height="947" alt="202" src="https://github.com/user-attachments/assets/7c435ffd-8152-470a-a207-16805a18abd7" />
+
 
 </p>
 <p align="center">
-  ![Uploading 203.png…]()
+  <img width="1856" height="952" alt="203" src="https://github.com/user-attachments/assets/916adeb4-e7a8-499f-b51f-af579908fae3" />
+
 
 </p>
 
 - The `picorv32a.def.png` from the routing is 👇 
-![](../images/picorv32a.def.png)
-
-
+<img width="2048" height="2048" alt="picorv32a def" src="https://github.com/user-attachments/assets/f0a35c32-74d5-49e9-bd44-e27f1a4051b8" />
 
 
 
