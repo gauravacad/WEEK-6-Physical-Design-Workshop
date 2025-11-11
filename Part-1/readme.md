@@ -21,7 +21,10 @@
 ## [Get familiar with open-source EDA tools](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-1/readme.md#get-familiar-with-open-source-eda-tools)  
 
 - [OpenLane Directory Structure](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-1/readme.md#openlane-directory-structure)  
-- [D]()
+- [Design Preparation Setup](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-1/readme.md#design-preparation-setup)  
+- [Review files after design prep and run synthesis](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-1/readme.md#review-files-after-design-prep-and-run-synthesis)  
+- [Steps to characterise Synthesis results](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-1/readme.md#steps-to-characterise-synthesis-results)  
+
 
 
 
