@@ -183,7 +183,8 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 <p align="center">
-  <img width="1000" height="" src="../images/201.png">
+ <img width="1856" height="926" alt="201" src="https://github.com/user-attachments/assets/6d190090-f083-422e-a7bd-12e1eabda75c" />
+
 </p>
 <p align="center">
 <img width="1846" height="947" alt="202" src="https://github.com/user-attachments/assets/7c435ffd-8152-470a-a207-16805a18abd7" />
