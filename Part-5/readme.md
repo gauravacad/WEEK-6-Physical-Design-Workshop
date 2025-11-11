@@ -186,10 +186,12 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
   <img width="1000" height="" src="../images/201.png">
 </p>
 <p align="center">
-  <img width="1000" height="" src="../images/202.png">
+![Uploading 202.png…]()
+
 </p>
 <p align="center">
-  <img width="1000" height="" src="../images/203.png">
+  ![Uploading 203.png…]()
+
 </p>
 
 - The `picorv32a.def.png` from the routing is 👇 
