@@ -21,7 +21,7 @@
 - [Netlist binding and initial place design](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#netlist-binding-and-initial-place-design)  
 - [Optimize placement using estimated wire-length and capacitance](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#optimize-placement)
 
-
+---
 
 
 # Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells
@@ -67,10 +67,198 @@ In this case, when calculated
 
 ![Screenshot 2024-04-29 162810](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5b4ef1fb-2d73-4819-95c7-d3c36de576fd)
 
-In this case, when calculated
+In this case, whwn calculated
 
 - Utilization factor = (4 squnits)/(8 squnits) = 0.5
 - Aspect Ratio = (2 units)/(4 units) = 0.5 //The core is in a rectangular shape.
+
+
+![Screenshot 2024-04-29 165339](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b8da70b3-81d2-4607-94c6-e130faf9b7ea)
+
+In this case , when calculated
+
+- Utilization factor = (4 squnits)/(16 squnits) = 0.25
+- Aspect Ratio = (4 units)/(4 units) = 1 //The core is in a square shape.
+
+
+### Concept of pre-placed cells
+
+The concept of pre-placing cells is nothing but reusing already designed blocks by not designing them again and again. The most commonly used pre-placed blocks are Memory , comparators , Mux etc.. , These blocks can be called as Macros (or) I.P's .We need to place these macros very carefully in such a way that if these blocks are more connected to input pins, then we should place these close to those input pins. These should be placed in a way such that the wiring length should be decreased.
+
+The term Pre-placed refers to "Placing those blocks prior to placement stage that is in Floorplan stage. After placing those blocks in Floorplan stage we need to define some placement blockages in order to avoid Placing of other standard cell near to those blocks by the tool during placement stage. By using this pre-placed cells the Time-to-Market can be reduced.
+
+![Screenshot 2024-04-29 173001](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/15833499-734d-4f4f-96b7-e87b51bacfec)
+
+
+### De-coupling Capacitors
+
+Generally these pre-placed blocks will be high-power draining blocks. In some cases, the power they recieve from the power source will not be sufficient for them to perform switching i.e the signal will not be in the range of its noise margin because there will be a voltage drop in the inter-connecting wires. In this case, the De-coupling Capacitors comes into the picture. 
+
+![Screenshot 2024-04-29 180454](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/16730df5-6ed5-4278-84e1-a73b082a9acc)
+
+These De-cap cells will be placed near to the blocks that will drain high power. When there is no switching is being performed the De-cap cell will be connected to power source and gets charged to its high level and when the switching is being performed the De-cap cells will be connected to the blocks and the power required for the block will be supplied by the De-cap cell, and when ever the switching stops again the De-cap cell will start to getting charged. This is the working of De-cap cells and these cells plays a crucial role in the circuit design.
+
+![Screenshot 2024-04-29 180434](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ca65ac68-b354-4a3b-acd3-ebd001c9d077)
+
+
+### Power Planning
+
+In the previous section we used De-cap cells to manage power for different blocks.But Decap cells have some limitations such as Leakage power and increase in the area of chip. To overcome these we use a technique called Powerplanning. In some areas of the chip when there is more  switching happening, two tyoes of phenomena can occur
+- Voltage drop
+- Ground bounce
+
+![Screenshot 2024-04-29 220148](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e35764ce-4a3d-4348-829b-97467e7ae641)
+
+**Voltage drop** : When a group of cells are simultaneously switching from 0 to 1, then every cell needs the power and In case the power is supplying from one source, there may occur the shotage of power and drop in the input voltage happens at that place. This is called as "Voltage Drop". The problem occurs only when the voltage level goes below the noise margin.
+
+![Screenshot 2024-04-29 220418](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f1279b81-fd52-4693-aa83-2e871c70b96c)
+
+**Ground Bounce** : When a group of cells are simultaneoisly switching from 1 to 0, then every cell dumps the power to th ground simultaneously to the same ground pin. In this case the ground instead of being at 0 experiences a short rise in the voltage and this is called as "Ground Bounce".The problem occurs only when the voltage level goes above the noise margin.
+
+![Screenshot 2024-04-29 220249](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/239dc9f3-88d5-46d1-ab4d-710e87686f8e)
+
+In order to avoid these abnormalities, a technique called Power Planning is used. In this technique two different Power mashes are used, one for Vdd and another one for Ground.These meshes are prepared by using top two metal layers because they should have less voltage drop. These meshes will be spread across the design and are connected to multiple sources of Vdd and Ground.
+
+![Screenshot 2024-04-29 220510](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/edd194dd-6580-4ac8-a163-a0438714cb30)
+
+With this technique whenever a cell needs power to switch from 0 to 1, it takes from nearest Vdd layer and if a cell needs to drain the power it will drain it to the nearest Ground Layer.
+
+![Screenshot 2024-04-29 220626](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7e67b60d-cc66-46d2-bb9f-60fd331c0fea)
+
+
+### Pin placement and logical cell placement blockage
+
+Pin Placement is one of the crucial step in the design process. Bad pin placement results increase in the length of wire used for connectivity, which inturn results in some adverse affects.
+Pins should be placed in such a way that the required for connecting them to the blocks should be as less as possible. For example if an input pin is driving two blocks then that pin should be placed near to those two blocks.
+
+Let's consider the below design
+
+![Screenshot 2024-04-29 224141](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/c63b1efc-c7b0-4cdb-b453-cb88b30b8a3e)
+
+For the above design the effective pin placement will look like as follows
+
+![Screenshot 2024-04-29 224300](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/38417a02-524d-4aef-b54d-d9f67a246df1)
+
+In the above pin placement, we can observe two things 
+- The order of input pins and output pins is random. As already mentioned the pins should be placed based on the connectivity not based on the order.
+- The pins used for clock signals are larger in size when compared to pins used for signals, this is because clock is one of the important signal in the design and delays and voltage drops in the clock signal leads to failure of the chip. That is the reason why we use higher metal layers for routing the clock in the design.
+
+After finishing the pin placement, we should use placement blockages outside of the core area and inside of the die area inorder to avoid placement and routing tool using that space for placement and routing, because it is the area dedicated only for Pin Placement purpose.
+
+![Screenshot 2024-04-29 225000](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/428dda61-6e63-4c8a-b11f-51c5f7da5cb9)
+
+
+### Steps to run floorplan using OpenLANE
+
+
+For Floorplan to run smoothly, as a designer we should take care of some switches, that makes changes to the floorplan when changed. For example Utilization factor and aspect ratio are also part of switches. Designer should cross check these switches before initializing floorplan whether they are alligned with the project or not. Below image shows different types of switches in floorplan stage.
+
+![floorplan_switches](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e31bdee9-2776-4d28-9e7e-c036b3378b03)
+
+
+![floorplan tcl](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a666b97c-cb76-4b4e-9c8a-3995db52f61a)
+
+In the OpenLane lowest priority is given to system default(Floorplanning.tcl) and the second highest priority will be given to config.tcl and the highest priority will be given to PDK_varient.tcl for considering the values for switches.
+
+
+### Review Floorplan files and steps to view floorplan
+
+After confirming that all the switches are as per requirement, now we should executr a command **`run_floorplan`** , in order to start the floorplan stage.
+
+If any errors occur during the floorplan stage it will display those errors.If it does not display any errors then our floorplan stage has succesfully completed.
+
+![floorplan_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/d8ffd0cf-245b-47e1-b9c9-47b5352811c9)
+
+After completion of the floorplan we can check the report generated by the tool and check some of the aspects like die area etc.. , but in order to view the design in GUI we should use MAGIC tool.
+
+![Floorplan_report](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7b320946-dfe0-4f09-a673-20727517a8a7)
+
+In order to enter into the MAGIC tool we need to use the command
+
+**` magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &`**
+
+And in GUI floorplan looks like this![floorplan_layout(magic)](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4abb51b3-dbbf-4abe-bdd5-fe9d1c7557ce)
+
+
+### Review Floorplan layout in magic
+
+While in the GUI, to allign the design to the middle of the screen. First we need to select the whole design by pressing S in the keyboard and then V in the keyboard.
+
+In order to zoom to any particular area first left click the mouse and select the area to zoom and then right click again, and then press Z in the keyboard to zoom in the selected area.
+
+In order to know the details of any cell in the design, just move the cursor to that cell and press S to select the cell and then in the window of tkcon enter the command "what" then it will displey the details of the selected ine.
+
+![vertical_io_pin](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a28b636e-8614-4f03-85bc-3d715aaab4ec)
+
+
+![horizontal_io_pin](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b5d1258f-6447-4f2c-9af0-515cc752618e)
+
+
+![Decap_cell](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/87d6e43b-79b7-4d1b-9368-73ce6702bf8c)
+
+
+
+## Library Bindidng and Placement
+
+### Netlist binding and initial place design
+
+In the netlist every element has its own shape, for example And gate has a different shape and or gate has a different shape. But in a library every element has only a square or rectangle shape. A Library consists of every elements that can be readily used and also the elements comes with their respective properties such as area, delay etc.. . We will have different versions of the same element with different properties.
+
+![Screenshot 2024-04-30 152912](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f3aa46fa-675b-425a-b871-6073429312bd)
+
+
+![Screenshot 2024-04-30 152937](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ed3e79b7-5bc0-4a50-a555-7622a1d3e5f0)
+
+In the above picture we have 3 different sets of same elements. The elements which are larger in size are faster but occupies larger area and the smaller set will occupy less area but are slower when compared to larger ones.
+
+
+### Optimize placement using estimated wire-length and capacitance
+
+During Placement we should definitely consider the estimated wire length and place the cells according to it. Wire length is estimated by calculating the distance from input source of those cells and the distance to the output sinks that are being driven by them. 
+
+For above example tool will place the blocks by using the estimated wire length as shown in the below figure
+
+![Screenshot 2024-04-30 154924](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f60da452-6c6d-4304-8108-726e41852c30)
+
+
+### Congestion aware placement using replace
+
+
+After successful Floorplanning, the next step in the design process is Placement. Placement stage will consist of two stages 
+- Global Placement - In Global Placement stage tool decides the places for all standard cells in the design.
+- Detailed Placement - In Detailed Placement stage the tool places all the standard cells in their designated places and legalization of the Placement will be done. Legalization is nothing but making sure that standard cells are not overlapped on each other in the design and are placed with in the site rows of the design.
+
+In order to start the placement we need to use the command **`run_placement`**.
+
+After Placement is done to check whether the cells are placed correctly or not, we need to check GUI and that will be done using MAGIC tool with the following command
+
+**`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`**
+
+![Screenshot from 2024-04-30 22-13-00](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a5a4b928-7bff-4c9f-bef4-408367312c06)
+
+
+![Screenshot from 2024-04-30 22-14-10](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9a284840-6402-40f6-aa1c-9c6c50cb1909)
+
+
+![Screenshot from 2024-04-30 22-15-57](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/378e46cd-3f9c-4176-8695-2a739af85bba)
+
+**Screentshot:** Run_floorplan
+
+<img width="1063" height="621" alt="image" src="https://github.com/user-attachments/assets/7f17dda0-dcbf-4b33-abc6-f7a3c53343a6" />
+
+**Screentshot:** finding Magic file and Display
+<img width="1062" height="633" alt="image" src="https://github.com/user-attachments/assets/4de5554e-4c34-44c0-9250-133d8825d624" />
+
+**Screentshot:** finding Magic file and Display
+
+<img width="1063" height="627" alt="image" src="https://github.com/user-attachments/assets/0cc4e398-3ba1-43d9-8eb9-ae3e799c2886" />
+
+---
+<img width="1232" height="644" alt="image" src="https://github.com/user-attachments/assets/ed650090-7b49-4674-af58-344f7c43cddc" />
+
+
+
+
 
 
 
