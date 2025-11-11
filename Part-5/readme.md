@@ -71,6 +71,127 @@ We can see the final layout in gui using magic tool by using the command
 <img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/e71b4d53-3743-4a53-a5df-f7e1bbf27ed6" />
 
 
+# Routing and Design rule check (DRC)
+
+
+- `Maze Routing - Lee's Algorithm`
+<p align="center">
+  <img width="1000" height="" src="../images/168.png">
+</p>
+
+<p align="center">
+  <img width="1000" height="" src="../images/169.png">
+</p>
+
+- DRC Check
+  
+<p align="center">
+  <img width="1000" height="" src="../images/170.png">
+</p>
+<p align="center">
+  <img width="1000" height="" src="../images/171.png">
+</p>
+
+- Parasitics Extraction
+<p align="center">
+  <img width="1000" height="" src="../images/172.png">
+</p>
+
+
+# Power Distribution Network and routing
+
+- to get generate power distribution network. complete until the cts will the follwoing commands 
+
+```shell
+prep -design picorv32a -tag 20-03_18-30 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+set ::env(SYNTH_STRATEGY) "DELAY 0"
+set ::env(SYNTH_SIZING) 1
+
+run_synthesis
+
+init_floorplan
+place_io
+global_placement_or
+detailed_placement
+tap_decap_or
+detailed_placement
+
+run_cts
+```
+- use the command `gen_pdn` to generate the power distribution network
+  
+<p align="center">
+  <img width="1854" height="906" alt="196" src="https://github.com/user-attachments/assets/6d0ad34f-7805-42ac-983f-a4da3721223a" />
+
+</p>
+<p align="center">
+  <img width="1851" height="912" alt="197" src="https://github.com/user-attachments/assets/220c3ba3-3163-4f04-93c3-1801a073a345" />
+
+</p>
+
+- to view the pdn output naviagte to the directory `openlane_working_dir/openlane/designs/picorv32a/runs/20-03_18-30/tmp/floorplan/` in here we have `12-pdn.def` file
+- `def` files can viewed in magic. command is 👇
+
+```shell
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 12-pdn.def &
+```
+
+<p align="center">
+  <img width="1845" height="920" alt="193" src="https://github.com/user-attachments/assets/259eca64-4fdd-4f15-8968-8764f6293875" />
+
+</p>
+<p align="center">
+<img width="1732" height="928" alt="194" src="https://github.com/user-attachments/assets/71c7e04b-9110-45d9-88ba-805f4748d568" />
+
+</p>
+<p align="center">
+ <img width="1747" height="909" alt="195" src="https://github.com/user-attachments/assets/1b142588-c8ec-4847-84f0-888aa5550775" />
+
+</p>
+
+
+### the next step, which is left is routing..
+
+- use the command `run_routing` to perform routing.
+
+<p align="center">
+  <img width="1842" height="906" alt="198" src="https://github.com/user-attachments/assets/1796e304-9db5-49a9-a9a4-57227492b8d6" />
+
+</p>
+<p align="center">
+  <img width="1853" height="888" alt="199" src="https://github.com/user-attachments/assets/6c298129-8215-4852-b390-99318d399068" />
+
+</p>
+<p align="center">
+  <img width="1855" height="898" alt="200" src="https://github.com/user-attachments/assets/bfaefad1-c66f-4ac2-a086-8fbfcef7af22" />
+
+</p>
+
+- It took 1 hour for complete routing
+- Routing started with `26890` violations in the `1st optimization` iteration and finally reduced to `0` violations in the `57th optimization` iteration
+
+- To open routing file naviagte to directory `cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-03_18-30/results/routing/` there we have def which is read magic
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+```
+<p align="center">
+  <img width="1000" height="" src="../images/201.png">
+</p>
+<p align="center">
+  <img width="1000" height="" src="../images/202.png">
+</p>
+<p align="center">
+  <img width="1000" height="" src="../images/203.png">
+</p>
+
+- The `picorv32a.def.png` from the routing is 👇 
+![](../images/picorv32a.def.png)
+
+
+
 
 
 ## References
