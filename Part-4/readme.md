@@ -36,17 +36,18 @@
 
  Open the tracks.info file to know more about tracks
 
- ![Screenshot from 2024-05-03 14-25-47](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/c2dfc964-c417-409b-a3c4-6f799d31741e)
+ 
+ <img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/ad395296-ca7e-4626-b289-0e0f45a08c55" />
 
  In the cell design input and output ports are on the li1 layer.We need to convert the grid into tracks.
 
  Open the tkcon window and give the command for grid according to the track file.
 
-![Screenshot from 2024-05-03 14-41-05](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3e6c78c1-4883-4858-8332-3cb6d451dfbb)
 
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/e72a4756-75af-493c-bd1c-d67b06bc5212" />
  Now we can see that both input and output ports are placed at the intersection of the tracks. Here our second condition also satisfies as 3 boxes are covered between the boundaries.
 
-![Screenshot from 2024-05-03 14-43-07](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/11ac8a4d-9e0f-40fa-9b70-d07415a46ca2)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/f0abb107-42fe-4742-8071-11775d5dc1de" />
 
 
 
@@ -56,10 +57,12 @@
 Now we need to extract the LEF file.First save .mag file by using the command **`save sky130_vsdinv.mag`** in the tkcon terminal.
 
 ![Screenshot from 2024-05-03 15-06-12](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/773a41d2-5c04-4481-bd6c-0342d686e21f)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/abd41a2e-1a93-4ae1-bb91-507d51bc2a0b" />
 
 Now open the saved .mag file using the command **`magic -T sky130A.tch sky130_vsdinv.mag &`**
 
 ![Screenshot from 2024-05-03 15-10-20](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1b3829cf-0f5b-4bfc-bc41-089e1014f306)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/d034bcd3-ea14-44e1-8480-48bc433ef306" />
 
 Now in the tkcon terminal use the command **`lef write`** in order to create a LEF file.
 
