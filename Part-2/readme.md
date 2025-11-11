@@ -1,3 +1,29 @@
+# Day-2: Floorplanning and Placement  
+
+## [Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)  
+
+- [Chip FloorPlanning Considerations](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#chip-floorplanning-considerations)  
+- [Utilization Factor and Aspect Ratio](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#utilization-factor-and-aspect-ratio)  
+- [Concept of pre-placed cells](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#concept-of-pre-placed-cells)  
+- [De-coupling Capacitors](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#de-coupling-capacitors)  
+- [Power Planning](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#power-planning)  
+- [Pin placement and logical cell placement blockage](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#pin-placement-and-logical-cell-placement-blockage)  
+---
+## [Steps to run floorplan using OpenLANE](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#steps-to-run-floorplan-using-openlane)  
+
+- [Review Floorplan files and steps to view floorplan](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#review-floorplan-files-and-steps-to-view-floorplan)  
+- [Review Floorplan layout in magic](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#review-floorplan-layout-in-magic)  
+
+---
+
+## [Library Binding and Placement](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#library-binding-and-placement)  
+
+- [Netlist binding and initial place design](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#netlist-binding-and-initial-place-design)  
+- [Optimize placement using estimated wire-length and capacitance](https://github.com/gauravacad/WEEK-6-Physical-Design-Workshop/edit/main/Part-2/readme.md#optimize-placement)
+
+
+
+
 # Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells
 
 ## Chip FloorPlanning Considerations
