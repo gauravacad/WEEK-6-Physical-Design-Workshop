@@ -32,7 +32,8 @@
 
 **Aurdino Board**: The image below is an Aurdino Microcontroller Board. Here we focus more on the encircled area, which contains the 'Microprocessor',that we will be designing from abstract level till fabrication level by using RTL to GDS flow
 
-![Screenshot 2024-04-27 184745](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/76f788e6-5e83-410c-becc-cf496a400188)
+<img width="557" height="434" alt="image" src="https://github.com/user-attachments/assets/e34ada42-d1f1-452e-b1c9-68631fd44d68" />
+
 
 While we cosider the chip, there are 3 main components:
 
@@ -42,13 +43,15 @@ While we cosider the chip, there are 3 main components:
 
 (3) Core : It is the area where our entire logic will be implemented.
 
-![Screenshot 2024-04-25 121626](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/deb72a9c-1f29-4774-9462-1a9475746c8f)
+<img width="1343" height="860" alt="image" src="https://github.com/user-attachments/assets/4273fda0-ae6a-4e21-80ba-a0533656ada3" />
+
 
 The above mentioned MicroProcessor in an aurdino board is a package that consists of MicroProcessor chip and some other Foundry IP's(Intellectual Property). All of these combined called as a package.
 
 For example, let's consider a package that consists of RISC V SOC and some other IP's such as SRAM , ADC , DAC , PLL etc..
 
-![Screenshot 2024-04-25 122115](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3685aa0c-5234-45d8-b8fc-f36cbbdc1dcc)
+<img width="1257" height="859" alt="image" src="https://github.com/user-attachments/assets/b82041dc-7b4d-452a-9514-645863bae9b8" />
+
 
 
 ###  Introduction to RISC-V
@@ -56,7 +59,8 @@ For example, let's consider a package that consists of RISC V SOC and some other
 **ISA**: ISA is known as "Instruction Set Architecture". It is nothing but a way of communicating with the computer.
 In general we write codes that need to be executed by the system, using coding languages like C , Java etc. , but machine can't understand those languages. It is where ISA comes into picture. By using ISA the codes that were written wil be converted into assembly language and from there to binary i.e Machine understandable language. This is the purpose of the ISA, and the RISC V ISA is the latest ISA released.
 
-![Screenshot 2024-04-25 125225](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5c651754-2931-4f70-9c35-5b9ef0b5f841)
+<img width="1737" height="1079" alt="image" src="https://github.com/user-attachments/assets/7f2094cc-6834-4b6b-af7e-b7d451140336" />
+
 
 
 ### From Software Applications to Hardware
@@ -73,7 +77,8 @@ The System Software consists of different layers:
 (3) **Assembler** : Assembler converts the .exe files into binary language and provides it to the hardware, and hardware performs the respective operations.
 
 
-![Screenshot 2024-04-25 150500](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3997bfe1-9b4a-4824-9377-2f0af6141092)
+<img width="1737" height="1079" alt="image" src="https://github.com/user-attachments/assets/001232e1-ecb8-4078-b630-1736f1a15513" />
+
 
 
 ## SOC Design and OpenLane
@@ -96,7 +101,8 @@ In case of EDA Tools we have Qflow , OpenRoad , OpenLane  etc...
 
 In case of PDK Data, Recently in 2020 Google collabarated with SkyWater Technology and made **FOSS 130nm Production PDK** OpenSource.
 
-![Screenshot 2024-04-26 120941](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7f646e7f-6c14-4b9b-9952-057bd5b9f100)
+<img width="681" height="669" alt="image" src="https://github.com/user-attachments/assets/148979eb-a2cb-4b45-a62f-bb39edf2e0b6" />
+
 
 What are RTL Designs?
 
