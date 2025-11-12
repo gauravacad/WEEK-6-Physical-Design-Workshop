@@ -215,7 +215,8 @@ In the above layout we have some violations, Open tech file and make changes as 
 
 After updating the tech file load it again and check for errors
 
-![Screenshot from 2024-05-03 01-44-19](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f0a0fda2-7cda-4bd9-aee6-542aa47c7a41)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/5c640e02-5941-4b2c-80f8-cf26279c9b14" />
+
 
 Now after tapping the nwell violations are resolved.
 
