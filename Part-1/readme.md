@@ -77,7 +77,8 @@ The System Software consists of different layers:
 (3) **Assembler** : Assembler converts the .exe files into binary language and provides it to the hardware, and hardware performs the respective operations.
 
 
-<img width="1737" height="1079" alt="image" src="https://github.com/user-attachments/assets/001232e1-ecb8-4078-b630-1736f1a15513" />
+<img width="1741" height="1078" alt="image" src="https://github.com/user-attachments/assets/1313d63a-525e-4d90-b57b-5c5d774d14f5" />
+
 
 
 
@@ -101,7 +102,8 @@ In case of EDA Tools we have Qflow , OpenRoad , OpenLane  etc...
 
 In case of PDK Data, Recently in 2020 Google collabarated with SkyWater Technology and made **FOSS 130nm Production PDK** OpenSource.
 
-<img width="681" height="669" alt="image" src="https://github.com/user-attachments/assets/148979eb-a2cb-4b45-a62f-bb39edf2e0b6" />
+<img width="681" height="669" alt="image" src="https://github.com/user-attachments/assets/e580793e-33b5-46d9-93d3-dc3ee1604668" />
+
 
 
 What are RTL Designs?
@@ -126,25 +128,29 @@ PDK(Process Design Kit) is a collection of files used to model a fabrication pro
 
 The simplified RTL to GDS Flow starts with an RTL file. After going through some set of stages we will get the output as a GDS file, which can be readily sent to foundry for fabrication. The steps involved in the RTL2GDS Flow is of following:
 
-![Screenshot 2024-04-26 083825](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7b2892cd-4de4-4453-b012-96f7bb6d6830)
+<img width="1188" height="651" alt="image" src="https://github.com/user-attachments/assets/610b3f80-9225-4837-aa6e-9e57a6b38446" />
+
 
 (1) **synthesis** : 
 - In synthesis stage RTL file will be converted into a circuit by using the components from the Standard Cell Library.
 - The cells in the Standard Cell Library are called Standard Cells and they have the regular layout of same height but different widths.
 - Each cell has different models based on Electrical,HDL,Spice,Layout(Abstract and Detailed) etc....
 
-![Screenshot 2024-04-26 102201](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/71a3393c-2f6e-4b22-8b72-b26eaa22ff83)
+<img width="827" height="238" alt="image" src="https://github.com/user-attachments/assets/4b9e2721-4a78-4c14-9ba7-f414baa7a052" />
+
 
  (2) **Floor Planning** & **Power Planning** :
  - Floor Planning is a stage where the position of the components on the chip will be decided by keeping the area of the chip as minimal as possible by following a set of rules.
  - During the Floor Planning Stage itself the position of I/O pins,ports,pads will be determined.
 
-![Screenshot 2024-04-26 102220](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/85b4aae4-3ef6-473d-b638-692f5aace919)
+<img width="808" height="214" alt="image" src="https://github.com/user-attachments/assets/3bd959ef-1c69-4d41-8ac7-60ec5ebebdb3" />
+
 
  - In Power Planning stage the Power supply network i.e VDD & GND of the chip will be laid out. During Power PLanning 3 components Power Rings , Power Straps , Power Pads will be laid out.
  - For Power Network Top Metal Layers will be used because the Power Network should have minimum delay as possible and the top layers of metal will have the low resistance, So they are used.
 
-![Screenshot 2024-04-26 102235](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1aa9278c-331d-474a-8d60-74b9da1cb288)
+<img width="468" height="239" alt="image" src="https://github.com/user-attachments/assets/360b87fd-b6f2-4f9c-9cb4-842fed778156" />
+
 
 (3) **Placement** :
 - In Placement stage the components are placed within the areas planned during the FloorPlanning Stage.
@@ -153,7 +159,9 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - During Global Placement the Standard cells may overlap and does not follow the Placement Rules.
 - In Detailed Placement every standard cell will be placed in its optimal position by following the Placement rules.
 
-![Screenshot 2024-04-26 102251](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/861d2368-0a25-47d4-a092-67711d3afe1e)
+<img width="599" height="226" alt="image" src="https://github.com/user-attachments/assets/4839c229-183f-43e7-8821-c68edf160aa7" />
+
+
 
 (4) **CTS**(Clock Tree Synthesis) :
 - Before Performing Routing of the signals, we should perform Clock Routing.
@@ -162,7 +170,8 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - In order to eliminate the clock skew, we should deploy the technique called **Symmetric Tree Structure**.
 - There are different types of Symmetric Tree Structures. They are H-tree,I-tree,X-tree etc...
 
-![Screenshot 2024-04-26 102308](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3d64c44e-26cb-4c3e-af1f-e1e09d261e2d)
+<img width="243" height="184" alt="image" src="https://github.com/user-attachments/assets/dbe2e89f-4c1d-4008-adf3-e01925b9fa16" />
+
 
 (5) **Routing** :
 - Afetr the clock routing is done, now signals must be routed.
@@ -171,7 +180,8 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - In the stage of Global Routing, the tool generates a Routing guide by following the instructions given in the PDK.
 - In the stage of Detailed Routing, actual routing will be done according to the guide generated in the Global Routing Stage.
 
-![Screenshot 2024-04-26 102325](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4b8970a1-dfda-454c-a0a8-c789ef0963a2)
+<img width="754" height="286" alt="image" src="https://github.com/user-attachments/assets/bea49b3b-2e4d-4ed0-8e12-68cc79b3e804" />
+
 
 (6) **Sign-off** :
 - After Routing is done, the chip will be considered as completed and during Sign-off stage different types of checks will be performed.
@@ -188,7 +198,7 @@ OpenLane is started as an Open Source Flow for a true Open Source Tape-out exper
 
 ### Introduction to OpenLANE detailed ASIC design flow
 
-![Screenshot 2024-04-26 185534](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/6a21e3f7-a4e8-42c7-a1e8-748de6afa021)
+<img width="834" height="494" alt="image" src="https://github.com/user-attachments/assets/fa5b3027-58e3-4979-934c-795242dbaac4" />
 
 The image shows the OpenLane detailed ASIC Design Flow.The flow starts with Design RTL, It goes through RTL synthesis by Yosys and abc giving an optimised gate level netlist. Now we perform STA on the optimised netlist inorder to check for Timing violations. After STA we perofrm DFT and this step is optional and for this we use FAULT tool.
 
@@ -199,7 +209,8 @@ Fault(for DFT) :
 - Fault coverage
 - Fault Simulation
 
-![Screenshot 2024-04-28 090349](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/316fe057-88ce-4bf3-9f2a-fb9f42b03756)
+<img width="568" height="220" alt="image" src="https://github.com/user-attachments/assets/67ff1a8d-3f70-4376-83fc-93214b678ae1" />
+
 
  After performing DFT next comes Physical Implementation.It is also called as Automated PnR(Place and Route) and for this we use OpenRoad.
 
@@ -220,14 +231,16 @@ Dealing with Antenna Rule violations : When a metal wire segment is fabricated, 
 There are two solutions for this problem
 - Bridging attaches a higher layer intermediary. It requires Router awareness.
 
-![Screenshot 2024-04-28 093445](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/fddd163a-493a-4799-a659-4d20789d272b)
+<img width="361" height="162" alt="image" src="https://github.com/user-attachments/assets/116526ce-ebea-4ba1-81fc-91423fb54146" />
+
 
 - Add antenna diode cell to leak away the charges. Antenna diodes are provided by the SCL. For this we took a preventive approach.
   - Add a Fake antenna didoe next to every cell input after placement.
   - Run the Antenna Checker(Magic) on the routed layout.
   - If the checker reports violation on the cell input pin, replace the fake diode cell by a real one 
 
- ![Screenshot 2024-04-28 094148](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/aa0d19c1-1e9f-47a2-8e16-5e9e4a5b8f3d)
+<img width="238" height="204" alt="image" src="https://github.com/user-attachments/assets/9a51d709-c293-4fc0-bffe-0cef84b93976" />
+
 
  And at the end, we perform Physical Verification. Which includes DRC(Design Rule Checking) , LVS(Layout Vs Schematic). Along with the P.V we also performs STA to check for timing violations in the design.
  - MAGIC is used for DRC and SPICE Extraction from Layout.
@@ -253,11 +266,13 @@ There are two solutions for this problem
 
 In order to enter into BASH, by being in OpenLane directory we should use a command called **`docker`**. By using docker command we will enter into the Bash. After entering into bash we have to use the script flow.tcl, because this .tcl file contains the steps that need to be executed in the OpenLane and along with the tcl file we need to use -interactive switch in order to perform step by step process. If not used interactive switch the whole flow i.e RTL to GDS will be executed once and the final report will be given. The command that we should use for this is **`./flow.tcl -interactive`**.Now OpenLane is opened and we can observe the change in prompt and now we have to input packages required to run the flow and for this we use the command **`package require openlane 0.9`**.
 
-![Screenshot from 2024-04-29 09-36-22](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/89083deb-49db-4be9-8203-658f1f466c6c)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/46c4894d-4c70-46f9-a076-abca98388013" />
+
 
 Now we need to select the design on which we are going to perform RTL to GDS flow, we will be having 30 to 40 designs that are pre-built in the design folder in openlane and we will be selecting "picorv32a.v" design for this project.Now in order to perform synthesis(first stage of the project) on this design, first we need to setup the design and for that the command will be **`prep -design picorv32a`**.
 
-![design_prep_comp](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/dc62fda2-9b51-4544-a44f-f000f434ef34)
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/3ed4b30d-e727-42a8-b400-c625c562ae83" />
+
  
 At the end of the terminal we can see that **Preparation is complete**.
 
@@ -265,9 +280,6 @@ At the end of the terminal we can see that **Preparation is complete**.
 ### Review files after design prep and run synthesis
 
 After Preparation is done a directory with current date will be created in the runs folder.And in that directory all the directorys that are needed to store the results , reports etc.. will be created.
-
-![Uploading image.png…]()
-
 
 Initially every directory will be empty because we haven't performed any operations on the design.But we will have a direcrory named tmp and it contains different types of files.One of the files will be "merged.lef" file, it contains metal layer level and cell level information.
 
