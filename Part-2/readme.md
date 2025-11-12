@@ -34,18 +34,22 @@ In order to find out the Utilization Factor and Aspect Ratio, first we need to k
 - Core is an area in a chip which is used to place all the logic cells and components in a chip. It is the place where logic lies in a chip.
 - Die is an area that encircles the core area and used for placing I/O related components.
 
-![Screenshot 2024-04-29 162940](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/0579fc7f-009a-4e5b-a3e3-f51fecf1d1b2)
+<img width="913" height="660" alt="image" src="https://github.com/user-attachments/assets/3bcd3eda-582b-4109-9c93-63eeefe106b0" />
+
 
 
 The height and width of core area will be decided by the netlist of the design. It will be based on the no.of components required in order to execute the logic and the height and width of the die area will be dependent on the core area height and width.
 
-![Screenshot 2024-04-29 162542](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e2885f48-30b3-4aad-b746-f0c3369440db)
+<img width="871" height="277" alt="image" src="https://github.com/user-attachments/assets/39987274-22d6-4062-8764-b06c4cf2e256" />
+
 
 For example, lets consider a netlist that is having two logic gates and two flipflops each having area of 1 sq.unit. The netlist contains 4 elements and the minimum total area required for the core area will be 4 sq.units. 
 
-![Screenshot 2024-04-29 162459](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/34d0c495-66bb-4582-b15c-e6adf8619ab6)
+<img width="848" height="671" alt="image" src="https://github.com/user-attachments/assets/95ca0f3b-4b13-4dcc-9170-7a2af1e405ed" />
 
-![Screenshot 2024-04-29 162658](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4c09360a-29d5-42f7-aec7-46c16614faaa)
+
+<img width="384" height="330" alt="image" src="https://github.com/user-attachments/assets/0e261c0e-4e78-4275-8906-ff4d2f28dba6" />
+
 
 
 **Utilization Factor** : Utilization Factor is defined as "The ratio of the core area occupied by the netlist to the total core area".For a good FloorPlan, The Utilization Factor should never be '1' because when the Utilization factor becomes '1' , there will be no place for adding additional logic if needed and it will be considered as a bad FloorPlan.
@@ -58,22 +62,25 @@ For example, lets consider a netlist that is having two logic gates and two flip
 
 Lets consider the above mentioned example and evaluate some cases 
 
-![Screenshot 2024-04-29 162721](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/55cf4d1f-628d-4f2a-a968-744a7be7470e)
+<img width="348" height="327" alt="image" src="https://github.com/user-attachments/assets/65a6ffe2-205e-451a-9c21-17c39ea0f54c" />
+
 
 In this case, when calculated 
 - Utilization factor = (4 squnits)/(4 squnits) = 1
 - Aspect Ratio = (2 units)/(2 units) = 1 //The core is in a square shape.
 
 
-![Screenshot 2024-04-29 162810](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5b4ef1fb-2d73-4819-95c7-d3c36de576fd)
+<img width="562" height="367" alt="image" src="https://github.com/user-attachments/assets/2740c703-0b77-4f2d-9c45-bb8570749b40" />
 
-In this case, whwn calculated
+
+In this case, when calculated
 
 - Utilization factor = (4 squnits)/(8 squnits) = 0.5
 - Aspect Ratio = (2 units)/(4 units) = 0.5 //The core is in a rectangular shape.
 
 
-![Screenshot 2024-04-29 165339](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b8da70b3-81d2-4607-94c6-e130faf9b7ea)
+<img width="692" height="604" alt="image" src="https://github.com/user-attachments/assets/ce0031ce-470a-402e-aec7-7278956e5697" />
+
 
 In this case , when calculated
 
@@ -87,18 +94,21 @@ The concept of pre-placing cells is nothing but reusing already designed blocks 
 
 The term Pre-placed refers to "Placing those blocks prior to placement stage that is in Floorplan stage. After placing those blocks in Floorplan stage we need to define some placement blockages in order to avoid Placing of other standard cell near to those blocks by the tool during placement stage. By using this pre-placed cells the Time-to-Market can be reduced.
 
-![Screenshot 2024-04-29 173001](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/15833499-734d-4f4f-96b7-e87b51bacfec)
+<img width="1022" height="667" alt="image" src="https://github.com/user-attachments/assets/69e4906f-1333-4da0-867e-7b9c48c582c4" />
+
 
 
 ### De-coupling Capacitors
 
 Generally these pre-placed blocks will be high-power draining blocks. In some cases, the power they recieve from the power source will not be sufficient for them to perform switching i.e the signal will not be in the range of its noise margin because there will be a voltage drop in the inter-connecting wires. In this case, the De-coupling Capacitors comes into the picture. 
 
-![Screenshot 2024-04-29 180454](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/16730df5-6ed5-4278-84e1-a73b082a9acc)
+<img width="923" height="674" alt="image" src="https://github.com/user-attachments/assets/ea69b498-367d-4dd6-8a86-362cc443cf56" />
+
 
 These De-cap cells will be placed near to the blocks that will drain high power. When there is no switching is being performed the De-cap cell will be connected to power source and gets charged to its high level and when the switching is being performed the De-cap cells will be connected to the blocks and the power required for the block will be supplied by the De-cap cell, and when ever the switching stops again the De-cap cell will start to getting charged. This is the working of De-cap cells and these cells plays a crucial role in the circuit design.
 
-![Screenshot 2024-04-29 180434](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ca65ac68-b354-4a3b-acd3-ebd001c9d077)
+<img width="1285" height="610" alt="image" src="https://github.com/user-attachments/assets/4419dba4-32ee-42c8-ac1b-c11bab132b94" />
+
 
 
 ### Power Planning
@@ -107,23 +117,27 @@ In the previous section we used De-cap cells to manage power for different block
 - Voltage drop
 - Ground bounce
 
-![Screenshot 2024-04-29 220148](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e35764ce-4a3d-4348-829b-97467e7ae641)
+<img width="955" height="647" alt="image" src="https://github.com/user-attachments/assets/5d4d9be6-26f7-4231-8c19-45443fc792af" />
+
 
 **Voltage drop** : When a group of cells are simultaneously switching from 0 to 1, then every cell needs the power and In case the power is supplying from one source, there may occur the shotage of power and drop in the input voltage happens at that place. This is called as "Voltage Drop". The problem occurs only when the voltage level goes below the noise margin.
 
-![Screenshot 2024-04-29 220418](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f1279b81-fd52-4693-aa83-2e871c70b96c)
+<img width="962" height="235" alt="image" src="https://github.com/user-attachments/assets/c55e0900-3459-429b-87ba-39f27f35a364" />
+
 
 **Ground Bounce** : When a group of cells are simultaneoisly switching from 1 to 0, then every cell dumps the power to th ground simultaneously to the same ground pin. In this case the ground instead of being at 0 experiences a short rise in the voltage and this is called as "Ground Bounce".The problem occurs only when the voltage level goes above the noise margin.
 
-![Screenshot 2024-04-29 220249](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/239dc9f3-88d5-46d1-ab4d-710e87686f8e)
+<img width="955" height="246" alt="image" src="https://github.com/user-attachments/assets/340c632b-6900-4a5a-8c80-423465484b3e" />
 
 In order to avoid these abnormalities, a technique called Power Planning is used. In this technique two different Power mashes are used, one for Vdd and another one for Ground.These meshes are prepared by using top two metal layers because they should have less voltage drop. These meshes will be spread across the design and are connected to multiple sources of Vdd and Ground.
 
-![Screenshot 2024-04-29 220510](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/edd194dd-6580-4ac8-a163-a0438714cb30)
+<img width="920" height="708" alt="image" src="https://github.com/user-attachments/assets/4c51bd24-1470-47c6-9600-affd85403492" />
+
 
 With this technique whenever a cell needs power to switch from 0 to 1, it takes from nearest Vdd layer and if a cell needs to drain the power it will drain it to the nearest Ground Layer.
 
-![Screenshot 2024-04-29 220626](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7e67b60d-cc66-46d2-bb9f-60fd331c0fea)
+<img width="894" height="676" alt="image" src="https://github.com/user-attachments/assets/fbad2702-8d33-4d00-9472-0895ce0aed34" />
+
 
 
 ### Pin placement and logical cell placement blockage
@@ -133,11 +147,13 @@ Pins should be placed in such a way that the required for connecting them to the
 
 Let's consider the below design
 
-![Screenshot 2024-04-29 224141](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/c63b1efc-c7b0-4cdb-b453-cb88b30b8a3e)
+<img width="754" height="682" alt="image" src="https://github.com/user-attachments/assets/b1d7810c-b189-45b4-9d79-8d6f2dc2ae35" />
+
 
 For the above design the effective pin placement will look like as follows
 
-![Screenshot 2024-04-29 224300](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/38417a02-524d-4aef-b54d-d9f67a246df1)
+<img width="915" height="639" alt="image" src="https://github.com/user-attachments/assets/15242894-a281-417b-b4ef-87ba7905a829" />
+
 
 In the above pin placement, we can observe two things 
 - The order of input pins and output pins is random. As already mentioned the pins should be placed based on the connectivity not based on the order.
