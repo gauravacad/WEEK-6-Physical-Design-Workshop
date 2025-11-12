@@ -32,19 +32,23 @@ We need to extract the spice netlist from the given Inverter from MAGIC Tool ino
 
 First we need to create an extraction file of the inverter. we can do this by using the command **`extract all`** in the tkcon window. This will create an extracted file in the vsdstdcelldesign directory.
 
-![extracted](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5044221d-1571-4f26-938f-61d2e3aeceab)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/bdeb6058-a17f-42ff-947f-a3254b037bf2" />
+
 
 Next we need to create a spice file using this extracted file to use within the ngspice tool.For this the command will be
 
 **`ext2spice cthresh 0 rthresh 0`**, this will not create any new file. 
 
-![tkcon](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4e4a6585-a209-4a4d-9ab6-ac933d074d77)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/2ae3ed29-43f4-42a4-bac1-003cbf67c8d0" />
+
 
 After that use command **`ext2spice`** , this will create a spice file in the vsdstdcelldesign directory.
 
-![spice](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/0a8ba608-df8d-412d-9b32-09d2d9d6b24a)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/42903385-d88a-4d2b-a458-7eec33c12f51" />
 
-![spice_file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/37c0bd40-8f32-4f2f-a709-65811dccd312)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/72fcb1ad-77a2-4acd-873f-4762cd410888" />
+
 
 
 
@@ -57,15 +61,18 @@ After that use command **`ext2spice`** , this will create a spice file in the vs
 
 After extracting the SPICE file, we need to update it according to the design.
 
-![Screenshot from 2024-05-02 11-36-21](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/476c1e09-654f-4853-942f-b30616fb74f8)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/8822fcaf-eb30-42dc-b5e7-205da269dab6" />
+
 
 After that we need to run the SPICE file in the ngspice tool by using the command  **`ngspice sky130_inv.spice`**
 
-![Screenshot from 2024-05-02 11-38-19](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9fcf36ae-e6dd-46f3-8204-c4249a38ed22)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/bce30f08-5519-4132-8cd7-1cc46fbaf025" />
+
 
 Now we need to verify the plot of output vs time, we need to use the command  **`plot y vs time a`**
 
-![Screenshot from 2024-05-02 11-49-54](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/bf215ce3-1c35-406a-b93e-baedbfbd2def)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/de1cb66c-e447-432a-8b6e-3572922d8a3d" />
+
 
 
 
@@ -122,9 +129,11 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 
   In the downloaded files , **`.magicrc`** file serves as the start-up script for MAGIC.
 
-  ![Screenshot from 2024-05-02 14-46-09](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5ff1b106-2271-4497-b7ec-07fd1bb3bd34)
+  <img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/aa9c8b3a-b8a5-4af6-a016-72e3a2b62eaa" />
 
-  ![Screenshot from 2024-05-02 15-07-12](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/27f975da-cdff-4964-b65a-95699b11b791)
+
+ <img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/c98c0e45-5e8c-4aee-8790-653a0f70bf0e" />
+
 
 
 
@@ -133,12 +142,14 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 
   Use the command **`magic -d XR`** to open the Magic tool
 
-  ![Screenshot from 2024-05-02 15-16-02](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/dd47ceb4-4e8f-48db-a3c2-dd5fe5b88165)
+  <img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/869ab2b8-a752-43b0-8d1b-31ce861d2e27" />
+
 
 
   Now, select an area in the gui and guide the pointer on to the metal 3 layer and press P. The selected region will be filled with metal 3. Now in tkcon terminal type the command **`cif see VIA2`** , The metal 3 filled area will be filled VIA2 mask.
 
-  ![Screenshot from 2024-05-02 15-44-45](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/644585de-de5d-412e-ac95-a16ad73e0d94)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/434eb4e0-e6a6-4598-89ca-12cd50e0cca2" />
+
 
 
 
@@ -147,27 +158,33 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 
  Now, lets work on the poly.9 file. Load it into the magic tool by using the command **`load poly.mag`**  in tkcon terminal.
 
-![Screenshot from 2024-05-02 23-54-49](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/be29d16e-1f2a-4271-909c-0ae05afa63a9)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/f4fbcb89-e2ed-49c6-8aa5-6b47d8955f3f" />
+
 
 
  Check for the spacing between Poly resistor and poly in the layout and compare it with the actual value in the Skywater website. In the image below we can clearly see the error in spacing 
  between them. So now lets resolve it
 
-![Screenshot from 2024-05-03 00-00-55](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/fbd1f1be-aa19-4b33-84fb-212b324fb471)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/ad3bfc88-b8b9-43f9-9c97-c35f0419794d" />
 
 
-![Screenshot 2024-05-03 003013](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7ed03823-bd72-4f6b-a40b-79839afc77c8)
+
+<img width="1157" height="444" alt="image" src="https://github.com/user-attachments/assets/a1e25c02-f2ea-4233-80b1-b87c1de142dc" />
+
 
 
 Open the Sky130a.tech file, which is in the drc_tests directory and check for poly.9 keyword and make the changes that are shown in the images below and save it.
 
-![Screenshot from 2024-05-03 00-12-48](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5cd46200-35d0-4ed9-9737-1d1b9c01c5fb)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/34962f56-79c5-4626-a3b5-792a2ee69766" />
 
-![Screenshot from 2024-05-03 00-17-50](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/64791bb7-7edc-4901-83d7-6d1c16745747)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/7aa498fe-b6a7-43e1-b55c-6a2262f5e128" />
+
 
  Now again load the tech file by using the command **`tech load sky130A.tech`** , and again check drc by using command **`drc check`** in the tkcon terminal.
 
-![Screenshot from 2024-05-03 00-20-00](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1cc3741e-e424-466d-b74a-ae7d24b9be1b)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/04d07231-2a5d-49a9-bc30-21d0ee0c585d" />
+
 
 
 
@@ -176,16 +193,20 @@ Open the Sky130a.tech file, which is in the drc_tests directory and check for po
 
 Now load nwell.mag file into the magic and check for violations.
 
-![Screenshot 2024-05-03 012127](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/950b4a6a-dcaf-4e57-bf12-e6bda2ff602a)
+<img width="906" height="397" alt="image" src="https://github.com/user-attachments/assets/7226c11e-c163-479a-a445-d7fa343e0f0a" />
 
-![Screenshot from 2024-05-03 01-45-28](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7ac6a97a-1ac4-4572-924c-fd4389de7862)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/19513a98-fb3e-4e66-ba1b-06edeb947b10" />
+
 
 In the above layout we have some violations, Open tech file and make changes as shown
 
-![Screenshot from 2024-05-03 01-32-47](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1ac46750-2e45-45d1-b9df-0099222e9e19)
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/c26576da-ef37-4f6c-bf7b-95f4b134ffc1" />
 
 
-![Screenshot from 2024-05-03 01-36-45](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/cb7f2348-0880-4012-a6f4-fe26663efefc)
+
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/2540069b-706a-42a9-afc4-26275cc97075" />
+
 
 
 
